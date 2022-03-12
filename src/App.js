@@ -22,6 +22,4 @@ function App() {
   );
 }
 
-small change
-
 export default App;
