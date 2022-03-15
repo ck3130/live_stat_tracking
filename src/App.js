@@ -1,10 +1,10 @@
 import './App.css';
-import SquareBuilder from './square';
+import RinkBuilder from './rinkBuilder.js';
 
 function App() {
   return (
-    <div>
-      <SquareBuilder />
+    <div className="center">
+      <RinkBuilder />
     </div>
   );
 }
