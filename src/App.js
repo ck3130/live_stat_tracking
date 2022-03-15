@@ -1,10 +1,10 @@
 import './App.css';
-import RinkBuilder from './rinkBuilder.js';
+import StatTracker from './statTracker';
 
 function App() {
   return (
     <div className="center">
-      <RinkBuilder />
+      <StatTracker />
     </div>
   );
 }

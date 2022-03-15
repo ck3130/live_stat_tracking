@@ -1,13 +1,14 @@
 import React from "react";
 
-export default function RinkBuilder() {
-    return(
-        <svg width="400pt" height="170pt" >
+export default function RinkComponents(){
+    
+    return (
+        <>
             {/* main rink*/}
             <rect 
                 x="0pt" y="0pt"
                 width="400pt" height="170pt" 
-                fill="grey"
+                fill="aliceblue"
                 rx="25pt"
             />
             {/* left goal crease */}
@@ -50,7 +51,6 @@ export default function RinkBuilder() {
             {/* bottom-right face-off*/}
             <circle cx="338pt" cy="129pt" r="30pt" stroke="red" fill="none"/>
             <circle cx="338pt" cy="129pt" r="4pt" fill="red"/>
-
-        </svg>
+        </>
     );
 }
