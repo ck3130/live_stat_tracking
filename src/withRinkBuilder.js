@@ -1,15 +1,17 @@
 import React from "react";
 import RinkComponents from "./rinkComponents";
+import "./withRinkBuilder.css"
 
 export default function WithRinkBuilder({
     onTrack = f => f,
-    stats=[]
+    stats=[],
+    id
 }) {
     return(
-        <svg width="400pt" height="170pt" onClick={onTrack}>
+        <svg id={`rink${id}`} width="400px" height="170px" onClick={onTrack}>
             <RinkComponents />
             {stats.map((stat, i) => 
-            <circle key={i} cx={stat.x} cy={stat.y} r="4pt" fill="orange" fillOpacity=".5"/>
+            <circle key={i} cx={stat.x} cy={stat.y} r="4px" fill="orange" fillOpacity=".5"/>
             )}       
         </svg>
     );

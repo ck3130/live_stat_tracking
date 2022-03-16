@@ -8,7 +8,8 @@
     <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg">
         <rect width="100" height="100" fill="navy" id="root" />
     </svg>
-    <button id="butt" onclick="log()">button</button>
+    <button id="butt" value="false" onclick="log()">button</button>
+    <button id="butt2" value="false" onclick="log2()">button2</button>
   </body>
 
     <script>
@@ -22,8 +23,26 @@
         
         x.addEventListener("click", recordPos)
 
+        let q = false
+
+        let b1 = document.getElementById("butt");
+        let b2 = document.getElementById("butt2");
+
         function log() {
-            console.log("its a function click");
+            b1.setAttribute("value", true)
+            if (b2.getAttribute("value")=="true") console.log("both true")
+
+        }
+
+        function log2() {
+            b2.setAttribute("value", true)
+            if (b1.getAttribute("value")=="true") console.log("both true")
+
+        }
+
+        function f(){
+          let z = [...Array(10000000).keys()]
+          return z.reduce((a,b) => a+b,0)
         }
 
         // b.addEventListener("click", () => console.log("its a click"))

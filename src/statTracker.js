@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useStatistics } from './statistic-hooks';
 import WithRinkBuilder from './withRinkBuilder.js';
+import { RinkDiv } from "./rinkDiv.js"
 
 export default function StatTracker() {
     const { trackStat, statistics } = useStatistics();
 
+    const ref = React.createRef();
+
     const click = e => {
-        trackStat(e.pageX, e.pageY)
+        let node = ref
+        let nodeStyle = window.getComputedStyle(node.current)
+        let mL = nodeStyle.getPropertyValue("margin-left")
+        let mT = nodeStyle.getPropertyValue("margin-Top")
+        trackStat(e.pageX-parseInt(mL), e.pageY-parseInt(mT))
     }
+
     return (
-        <>
-            <WithRinkBuilder onTrack={click}/>
-            <WithRinkBuilder stats={statistics}/>
-        </>
+        <RinkDiv ref={ref}>
+            <WithRinkBuilder id={"track"} onTrack={click}/>
+            <WithRinkBuilder id={"display"} stats={statistics}/>
+        </RinkDiv>
     )
 } 

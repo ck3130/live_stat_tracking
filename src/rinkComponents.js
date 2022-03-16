@@ -6,51 +6,51 @@ export default function RinkComponents(){
         <>
             {/* main rink*/}
             <rect 
-                x="0pt" y="0pt"
-                width="400pt" height="170pt" 
+                x="0px" y="0px"
+                width="400px" height="170px" 
                 fill="aliceblue"
-                rx="25pt"
+                rx="25px"
             />
             {/* left goal crease */}
-            <svg x="22pt" y="71pt">
-            <circle cx="0pt" cy="14pt" r="14pt" stroke="red" fill="teal"/>
+            <svg x="22px" y="71px">
+            <circle cx="0px" cy="14px" r="14px" stroke="red" fill="teal"/>
             </svg>
 
             {/* right goal crease */}
-            <svg x="356pt" y="71pt" width="22pt">
-            <circle cx="22pt" cy="14pt" r="14pt" stroke="red" fill="teal"/>
+            <svg x="356px" y="71px" width="22px">
+            <circle cx="22px" cy="14px" r="14px" stroke="red" fill="teal"/>
             </svg>
 
             {/* left goal line */}
-            <line x1="22pt" y1="0pt" x2="22pt" y2="170pt" stroke="red" />
+            <line x1="22px" y1="0px" x2="22px" y2="170px" stroke="red" />
 
             {/* left blue line */}
-            <line x1="150pt" y1="0pt" x2="150pt" y2="170pt" stroke="blue" />
+            <line x1="150px" y1="0px" x2="150px" y2="170px" stroke="blue" />
 
             {/* center line */}
-            <line x1="200pt" y1="0pt" x2="200pt" y2="170pt" stroke="red" />
+            <line x1="200px" y1="0px" x2="200px" y2="170px" stroke="red" />
 
             {/* right blue line */}
-            <line x1="250pt" y1="0pt" x2="250pt" y2="170pt" stroke="blue" />
+            <line x1="250px" y1="0px" x2="250px" y2="170px" stroke="blue" />
 
             {/* right goal line */}
-            <line x1="378pt" y1="0pt" x2="378pt" y2="170pt" stroke="red" />
+            <line x1="378px" y1="0px" x2="378px" y2="170px" stroke="red" />
 
             {/* top-left face-off*/}
-            <circle cx="62pt" cy="41pt" r="30pt" stroke="red" fill="none"/>
-            <circle cx="62pt" cy="41pt" r="4pt" fill="red"/>
+            <circle cx="62px" cy="41px" r="30px" stroke="red" fill="none"/>
+            <circle cx="62px" cy="41px" r="4px" fill="red"/>
 
             {/* bottom-left face-off*/}
-            <circle cx="62pt" cy="129pt" r="30pt" stroke="red" fill="none"/>
-            <circle cx="62pt" cy="129pt" r="4pt" fill="red"/>
+            <circle cx="62px" cy="129px" r="30px" stroke="red" fill="none"/>
+            <circle cx="62px" cy="129px" r="4px" fill="red"/>
 
             {/* top-right face-off*/}
-            <circle cx="338pt" cy="41pt" r="30pt" stroke="red" fill="none"/>
-            <circle cx="338pt" cy="41pt" r="4pt" fill="red"/>
+            <circle cx="338px" cy="41px" r="30px" stroke="red" fill="none"/>
+            <circle cx="338px" cy="41px" r="4px" fill="red"/>
 
             {/* bottom-right face-off*/}
-            <circle cx="338pt" cy="129pt" r="30pt" stroke="red" fill="none"/>
-            <circle cx="338pt" cy="129pt" r="4pt" fill="red"/>
+            <circle cx="338px" cy="129px" r="30px" stroke="red" fill="none"/>
+            <circle cx="338px" cy="129px" r="4px" fill="red"/>
         </>
     );
 }
