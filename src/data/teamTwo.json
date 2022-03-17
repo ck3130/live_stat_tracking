@@ -1,0 +1,20 @@
+[
+    {
+        "firstName":"Randy",
+        "lastName":"Boyle",
+        "number":"45",
+        "team":"Two"
+    },
+    {
+        "firstName":"Jenny",
+        "lastName":"French",
+        "number":"87",
+        "team":"Two"
+    },
+    {
+        "firstName":"Fred",
+        "lastName":"Thompson",
+        "number":"33",
+        "team":"Two"
+    }
+]
