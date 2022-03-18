@@ -1,0 +1,15 @@
+button{
+    border:.1em solid darkgray;
+}
+
+.playerSelectButton {
+    background-color:lightgray;
+}
+
+.playerSelectButton:hover {
+    background-color: grey;
+}
+
+.playerSelectButtonSelected {
+    background-color: orange;
+}

@@ -33,7 +33,7 @@ export default function StatisticProvider({ children }) {
     const selectPlayer = (number, team) => setSelectedPlayer({number, team})
      
     return (
-        <StatisticsContext.Provider value={{ statistics, trackStat, players, selectPlayer }}>
+        <StatisticsContext.Provider value={{ selectedPlayer, statistics, trackStat, players, selectPlayer }}>
             {children}
         </StatisticsContext.Provider>
     )
