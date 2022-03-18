@@ -4,25 +4,27 @@ import "./teamFormPlayerRow.css"
 
 export default function TeamFormPlayerRow({firstName, lastName, number, team}) {
     
-    const { selectPlayer } = useStatistics()
-    const [hasFocus, setFocus] = useState(false)
+    const { selectPlayer, playerFocus, hasPlayerFocus } = useStatistics()
 
     const select = e => {
         selectPlayer(number, team);
+        playerFocus(e.target.id)
     }
+
+    const id = `${team}${number}`
     
     return(
         <tr>
             <td>{ firstName } { lastName }</td>
             <td>{ number }</td>
             <td>
-                <button 
+                <button
+                    id={id} 
                     type="button" 
-                    className={hasFocus ? "playerSelectButtonSelected" : "playerSelectButton"} 
+                    className={hasPlayerFocus === id ? "playerSelectButtonSelected" : "playerSelectButton"} 
                     name="playerSelect" 
                     onClick={select} 
-                    onFocus={() => setFocus(true)} 
-                    onBlur={() => setFocus(false)}>
+                >
                         x
                 </button>
             </td>
