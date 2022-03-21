@@ -6,12 +6,20 @@ import StatDetailForm from "./statDetailForm";
 
 function App() {
   return (
-    <>
-      <StatTracker />
-      <TeamForm team={ 'One' }/>
-      <TeamForm team={ 'Two' }/>
-      <StatDetailForm />
-    </>
+    <div className="main">
+      <div className="teamTableOne">
+        <TeamForm team={ 'One' }/>
+      </div>
+      <div className="statTracker">
+        <StatTracker />
+      </div>
+      <div className="teamTableTwo">
+        <TeamForm team={ 'Two' }/>
+      </div>
+      <div className="statDetailForm">
+        <StatDetailForm />
+      </div>
+    </div>
   );
 }
 

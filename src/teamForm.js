@@ -11,7 +11,6 @@ export default function TeamForm({ team }) {
                 <tr>
                     <th>Player</th>
                     <th>Number</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody>

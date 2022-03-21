@@ -1,0 +1,9 @@
+.statDetailForm {
+    height:25%;
+    padding:.5em;
+    border: .3em solid black;
+    color:white;
+    background-color: slategrey;
+    font-weight: bold;
+    box-shadow: .2em .2em .4em dimgrey;
+}

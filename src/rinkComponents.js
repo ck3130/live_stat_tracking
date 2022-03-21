@@ -8,8 +8,9 @@ export default function RinkComponents(){
             <rect 
                 x="0px" y="0px"
                 width="400px" height="170px" 
-                fill="aliceblue"
+                fill="lightcyan"
                 rx="25px"
+                stroke="black"
             />
             {/* left goal crease */}
             <svg x="22px" y="71px">

@@ -1,9 +1,13 @@
 button{
-    border:.1em solid darkgray;
+    border:.1em solid;
+    border-radius: .2em;
+    height:1em;
+    width: 1em;
+    vertical-align: middle;
 }
 
 .playerSelectButton {
-    background-color:lightgray;
+    background-color:mediumaquamarine;
 }
 
 .playerSelectButton:hover {
@@ -12,4 +16,19 @@ button{
 
 .playerSelectButtonSelected {
     background-color: orange;
+}
+
+table {
+    text-align: center;
+    vertical-align: center;
+    border-collapse: collapse;
+    box-shadow: .2em .2em .4em dimgrey;
+}
+
+th, td {
+    border: .2em solid black;
+    width:150px;
+    height:35px;
+    color:white;
+    background-color: slategray;
 }

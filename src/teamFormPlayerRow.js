@@ -16,17 +16,13 @@ export default function TeamFormPlayerRow({firstName, lastName, number, team}) {
     return(
         <tr>
             <td>{ firstName } { lastName }</td>
-            <td>{ number }</td>
-            <td>
-                <button
+            <td>{ number } <button
                     id={id} 
                     type="button" 
                     className={hasPlayerFocus === id ? "playerSelectButtonSelected" : "playerSelectButton"} 
                     name="playerSelect" 
                     onClick={select} 
-                >
-                        x
-                </button>
+                />
             </td>
         </tr>
     );
