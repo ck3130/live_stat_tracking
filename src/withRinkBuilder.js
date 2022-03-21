@@ -17,7 +17,7 @@ export default function WithRinkBuilder({
         <svg id={`rink${id}`} width="400px" height="170px" onClick={onTrack}>
             <RinkComponents />
             {stats.map((stat, i) => 
-            <circle key={i} cx={stat.x} cy={stat.y} r="4px" fill={colorPicker(stat)} fillOpacity=".7 5"/>
+            <circle key={i} cx={stat.x} cy={stat.y} r="4px" fill={colorPicker(stat)} fillOpacity=".75"/>
             )}       
         </svg>
     );
