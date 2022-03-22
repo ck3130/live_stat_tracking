@@ -8,16 +8,16 @@ export default function WithRinkBuilder({
     id
 }) {
     const colorPicker = stat => {
-        let detail = stat.statDetail
+        let detail = stat.detail
         if (detail === "goal") return "blue"
         if (detail === "shotOnGoal") return "orange"
-        if (detail === "miss") return "red"
+        if (detail === "miss") return "grey"
     }
     return(
         <svg id={`rink${id}`} width="400px" height="170px" onClick={onTrack}>
             <RinkComponents />
             {stats.map((stat, i) => 
-            <circle key={i} cx={stat.x} cy={stat.y} r="4px" fill={colorPicker(stat)} fillOpacity=".75"/>
+            <circle key={i} cx={stat.x} cy={stat.y} r="6px" fill={colorPicker(stat)} fillOpacity=".65" />
             )}       
         </svg>
     );

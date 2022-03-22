@@ -53,15 +53,23 @@
   justify-self: center;
 }
 
-.statDetailForm {
+.statDetail {
   grid-row: 2 / 3;
-  grid-column: 1 / 4;
+  grid-column: 2 / 3;
   justify-self: center;
+  height:auto;
+}
+
+.periodSelector {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  justify-self: center;
+  height:auto;
 }
 
 .main {
   display:grid;
-  grid-template: repeat(2, 1fr) / 1fr 400px 1fr;
+  grid-template: repeat(4, 1fr) / 1fr 400px 1fr;
   grid-gap:20px;
   margin: auto;
   margin-top: 4em;
@@ -72,4 +80,38 @@
   border:.2em solid gold;
   background-color:whitesmoke;
   box-shadow: .4em .4em 1em dimgrey;
+}
+
+h1 {
+  margin: 0 0 0 0
+}
+
+h1.title {
+  text-align: center;
+}
+
+h1.teamTwo {
+  text-align:right;
+}
+
+.instructions {
+  grid-row: 4 / 5;
+  grid-column: 1 / 4;
+  justify-self: center;
+  text-align: center;
+  font-size: .75em;
+  margin: .2em 0 0 0;
+  padding:0 0 0 0
+}
+
+.actionDisplayOne {
+  grid-row: 2 / 4;
+  grid-column: 1 / 2;
+  height:auto;
+}
+
+.actionDisplayTwo {
+  grid-row: 2 / 4;
+  grid-column: 3 / 4;
+  height:auto;
 }

@@ -13,26 +13,34 @@ export default function StatisticProvider({ children }) {
     const [selectedPlayer, setSelectedPlayer] = useState()
     const [statDetail, setStatDetail] = useState()
     const [hasPlayerFocus, setPlayerFocus] = useState()
+    const [statLocation, setStatLocation] = useState()
+    const [period, setPeriod] = useState("1")
 
     const addShot = () => setShotCount(shotCount + 1)
 
-    const trackStat = (x,y, player) => {
-        if (selectedPlayer && statDetail) {  
+    const trackStat = ({player, location, detail, count=shotCount, gamePeriod=period}) => {
+        player = player || selectedPlayer;
+        location = location || statLocation;
+        detail = detail || statDetail;
+        if (![player, location, detail].includes(undefined)) {
+            console.log("run trackStat")
             setStatistics([
                 ...statistics, 
                 {
-                    x,
-                    y,
-                    player:selectedPlayer,
-                    shotCount:shotCount+1,
-                    statDetail
+                    x: location.x,
+                    y: location.y,
+                    player:player,
+                    shotCount:count+1,
+                    detail,
+                    gamePeriod
                 }
             ]); 
             addShot();
             setSelectedPlayer()
             setStatDetail()
             setPlayerFocus()
-        }
+            setStatLocation()
+        };
     }
 
     const selectPlayer = (number, team) => setSelectedPlayer({number, team})
@@ -40,9 +48,17 @@ export default function StatisticProvider({ children }) {
     const selectStatDetail = (detail => setStatDetail(detail))
 
     const playerFocus = (id) => setPlayerFocus(id)
+
+    const selectArea = (x,y) => {
+        setStatLocation({x,y}); 
+    }
+
+    const selectPeriod = (period) => {
+        setPeriod(period);
+    }
      
     return (
-        <StatisticsContext.Provider value={{ hasPlayerFocus, playerFocus, statDetail, selectStatDetail, selectedPlayer, statistics, trackStat, players, selectPlayer }}>
+        <StatisticsContext.Provider value={{ period, selectPeriod, selectArea, hasPlayerFocus, playerFocus, statDetail, selectStatDetail, selectedPlayer, statistics, trackStat, players, selectPlayer }}>
             {children}
         </StatisticsContext.Provider>
     )

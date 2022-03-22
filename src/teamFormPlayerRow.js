@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { useStatistics } from './statistic-hooks';
 import "./teamFormPlayerRow.css"
 
 export default function TeamFormPlayerRow({firstName, lastName, number, team}) {
     
-    const { selectPlayer, playerFocus, hasPlayerFocus } = useStatistics()
+    const { selectPlayer, playerFocus, hasPlayerFocus, trackStat } = useStatistics()
 
     const select = e => {
         selectPlayer(number, team);
-        playerFocus(e.target.id)
+        playerFocus(e.target.id);
+        trackStat({player:{number,team}});
     }
 
     const id = `${team}${number}`
