@@ -8,7 +8,7 @@ export const useStatistics = () => useContext(StatisticsContext);
 export default function StatisticProvider({ children }) {
 
     const [statistics, setStatistics] = useState([]);
-    const [players, setPlayers] = useState([...teamOne, ...teamTwo])
+    const [players] = useState([...teamOne, ...teamTwo])
     const [shotCount, setShotCount] = useState(0)
     const [selectedPlayer, setSelectedPlayer] = useState()
     const [statDetail, setStatDetail] = useState()
