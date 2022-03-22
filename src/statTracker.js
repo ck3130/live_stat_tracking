@@ -26,9 +26,6 @@ export default function StatTracker() {
             <div>
             <WithRinkBuilder id={"track"} onTrack={click} stats={stats}/>
             </div>
-            {/* <div>
-            <WithRinkBuilder id={"display"} stats={statistics}/>
-            </div> */}
         </RinkDiv>
     )
 } 

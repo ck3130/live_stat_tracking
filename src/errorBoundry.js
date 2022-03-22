@@ -1,4 +1,4 @@
-import React, { Children, Component } from "react";
+import React, { Component } from "react";
 import ErrorScreen from "./errorOptions";
 
 export default class ErrorBoundry extends Component {
